@@ -1,0 +1,10 @@
+CREATE TABLE stock_prices (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    stock_name TEXT NOT NULL,
+    month_year TEXT NOT NULL,
+    open_price REAL NOT NULL,
+    close_price REAL NOT NULL,
+    high_price REAL NOT NULL,
+    low_price REAL NOT NULL,
+    volume INTEGER NOT NULL
+);
