@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics for {{ stock_name }}</title>
+</head>
+<body>
+    <h1>Analytics for {{ stock_name }}</h1>
+    <table border="1">
+        <tr>
+            <th>Month-Year</th>
+            <th>Open Price</th>
+            <th>Close Price</th>
+            <th>High Price</th>
+            <th>Low Price</th>
+            <th>Volume</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['month_year'] }}</td>
+            <td>{{ row['open_price'] }}</td>
+            <td>{{ row['close_price'] }}</td>
+            <td>{{ row['high_price'] }}</td>
+            <td>{{ row['low_price'] }}</td>
+            <td>{{ row['volume'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
